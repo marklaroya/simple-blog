@@ -2,11 +2,18 @@
 // slices is for different parts of the state that can be managed separately
 // example: authSlice for authentication, postSlice for blog posts, etc.
 
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
+
+// Dummy slice for now
+const dummySlice = createSlice({
+  name: 'dummy',
+  initialState: {},
+  reducers: {},
+});
 
 export const store = configureStore({
   reducer: {
-    // add slices here later
+    dummy: dummySlice.reducer,
   },
 });
 
